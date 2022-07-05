@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - JYStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class = "header">
+        <div class = "container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/picwish.png"></a>
+                </div>
+
+                <nav>
+                    <ul id="MenuItems">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a style="color:blue" href="products.html">Products</a>
+                        </li>
+                        <li>
+                            <a href="account.html">Account</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a href="cart.html"><img id="Cart" src="images/cart.png"></a>
+                <img id="Expand" src="images/menu.png" class="menu-icon" onclick="menuToggle()">
+            </div>
+        </div>
+    </div>
+
+    <div class = "small-container">
+        <div class = "row row-2">
+            <h2> Products</h2>
+            <div class = "sortFilter">
+                <select id = "sortingCriteria" onchange="sortRequest.call(this)">
+                    <option value ="Default">Default Order</option>
+                    <option value ="P_Ascending">Sort by Price (Ascending)</option>                 
+                    <option value ="P_Descending">Sort by Price (Descending)</option>
+                    <option value ="Rating">Sort by Rating</option>
+                </select>
+
+                <div id="filterCriteria" class="dropdown-check-list" tabindex="100">
+                    <span class="anchor">Select Category</span>
+                    <ul class="items">
+                        <li><input id ="catNecessities" class ="catbox" type="checkbox" input checked onchange="filterNecessities.call(this)">Necessities</li>
+                        <li><input id ="catElectronics" class ="catbox" type="checkbox" input checked onchange="filterElectronics.call(this)">Electronics</li>
+                        <li><input id ="catWeirdStuff" class ="catbox" type="checkbox" input checked onchange="filterWeirdStuff.call(this)">Weird Stuff</li>
+                    </ul>
+                </div>
+            </div>
+            
+
+        </div>
+        <div id = "productList" class = "row">
+            <div class="col-4 electronics" id="Math Teacher in a Pocket">
+                <img src="images/Math Teacher in a Pocket.jpeg">
+                <h4> Math Teacher in a Pocket </h4>
+                <div class="rating">
+                    <input type='hidden' class="ratingValue" value="5">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="purchase">
+                    <p class="price">$99.99</p>
+                    <button class="buttonCart" onclick="AddToCart(this)">
+                        <i class="fa fa-cart-plus cartPlus"></i>
+                    </button>
+                    <button class="buttonRemove" onclick="RemoveFromCart(this)">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+                
+            </div>
+            <div class = "col-4 necessities" id = "Money Container">
+                <img src = "images/Money Container.jpeg">
+                <h4> Money Container </h4>
+                <div class = "rating">
+                    <input type='hidden' class="ratingValue" value="3">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <div class="purchase">
+                    <p class="price">$56.10</p>
+                    <button class="buttonCart" onclick="AddToCart(this)">
+                        <i class="fa fa-cart-plus cartPlus"></i>
+                    </button>
+                    <button class="buttonRemove" onclick="RemoveFromCart(this)">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class = "col-4 necessities" id = "Vitamin C">
+                <img src = "images/Vitamin C.jpeg">
+                <h4> Vitamin C </h4>
+                <div class = "rating">
+                    <input type='hidden' class="ratingValue" value="1">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <div class="purchase">
+                    <p class="price">$9.50</p>
+                    <button class="buttonCart" onclick="AddToCart(this)">
+                        <i class="fa fa-cart-plus cartPlus"></i>
+                    </button>
+                    <button class="buttonRemove" onclick="RemoveFromCart(this)">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class = "col-4 weirdStuff" id = "Old Tissue Paper">
+                <img src = "images/Old Tissue Paper.jpeg">
+                <h4> Old Tissue Paper </h4>
+                <div class = "rating">
+                    <input type='hidden' class="ratingValue" value="0">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <div class="purchase">
+                    <p class="price">$0.20</p>
+                    <button class="buttonCart" onclick="AddToCart(this)">
+                        <i class="fa fa-cart-plus cartPlus"></i>
+                    </button>
+                    <button class="buttonRemove" onclick="RemoveFromCart(this)">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class = "col-4 weirdStuff" id = "New Tissue Paper">
+                <img src = "images/New Tissue Paper.jpeg">
+                <h4> New Tissue Paper </h4>
+                <div class = "rating">
+                    <input type='hidden' class="ratingValue" value="4">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <div class="purchase">
+                    <p class="price">$3.99</p>
+                    <button class="buttonCart" onclick="AddToCart(this)">
+                        <i class="fa fa-cart-plus cartPlus"></i>
+                    </button>
+                    <button class="buttonRemove" onclick="RemoveFromCart(this)">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class = "col-4 weirdStuff" id = "Some Rock">
+                <img src = "images/Some Rock.jpeg">
+                <h4> Some Rock </h4>
+                <div class = "rating">
+                    <input type='hidden' class="ratingValue" value="5">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="purchase">
+                    <p class="price">$18.70</p>
+                    <button class="buttonCart" onclick="AddToCart(this)">
+                        <i class="fa fa-cart-plus cartPlus"></i>
+                    </button>
+                    <button class="buttonRemove" onclick="RemoveFromCart(this)">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class = "col-4 necessities" id = "Functional Pencil">
+                <img src = "images/Functional Pencil.jpeg">
+                <h4> Functional Pencil </h4>
+                <div class = "rating">
+                    <input type='hidden' class="ratingValue" value="2">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <div class="purchase">
+                    <p class="price">$0.50</p>
+                    <button class="buttonCart" onclick="AddToCart(this)">
+                        <i class="fa fa-cart-plus cartPlus"></i>
+                    </button>
+                    <button class="buttonRemove" onclick="RemoveFromCart(this)">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class = "col-4 necessities" id = "Waxed Dental Floss">
+                <img src = "images/Waxed Dental Floss.jpeg">
+                <h4> Waxed Dental Floss </h4>
+                <div class = "rating">
+                    <input type='hidden' class="ratingValue" value="5">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="purchase">
+                    <p class="price">$5.10</p>
+                    <button class="buttonCart" onclick="AddToCart(this)">
+                        <i class="fa fa-cart-plus cartPlus"></i>
+                    </button>
+                    <button class="buttonRemove" onclick="RemoveFromCart(this)">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class = "page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+    </div>
+
+   <div class = "footer">
+        <div class = "container">
+            <div class = "row">
+                <div class = "footer-col-1">
+                    <h3> Download Our App</h3>
+                    <p> Download App for Android </p>
+                    <div class="app-logo">
+                        <a href="index.html"><img src="images/play-store.png"></a>
+                        <a href="index.html"><img src="images/app-store.png"></a>       
+                    </div>
+                </div>
+                <div class = "footer-col-2">
+                    <h3> Useful Links </h3>
+                    <ul>
+                        <li> <a href="index.html">Coupons</a> </li>
+                        <li> <a href="index.html">Blog Post</a> </li>
+                        <li> <a href="index.html">Return Policy</a> </li>
+                        <li> <a href="index.html">Join Affiliate</a> </li>
+                    </ul>        
+                </div>
+                <div class = "footer-col-3">
+                    <h3> Follow Me!!!! </h3>
+                    <ul> 
+                        <li> <a href="https://www.linkedin.com/in/chen-jin-yang-37baa8202/">LinkedIn</a> </li>
+                        <li> <a href="https://github.com/jinyang628">GitHub</a> </li>
+                    </ul>        
+                </div>
+            </div>
+            <hr>
+            <p class = "copyright"> Copyright 2022 - HTML Practice </p>
+        </div>
+   </div>
+
+</body>
+</html>
+
+<script type = "text/javascript" src = "filter.js"></script>
+<script type = "text/javascript" src = "sort.js"></script>
+<script type= "text/javascript" src= "cartActivation.js"></script>
+<script type = "text/javascript" src = "commonScripts.js"></script>
+
+<script>
+    var checkList = document.getElementById('filterCriteria');
+    checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+    if (checkList.classList.contains('visible'))
+        checkList.classList.remove('visible');
+    else
+        checkList.classList.add('visible');
+    }
+</script>

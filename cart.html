@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - JYStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="CheckoutList()">
+
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/picwish.png"></a>
+                </div>
+
+                <nav>
+                    <ul id="MenuItems">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="products.html">Products</a>
+                        </li>
+                        <li>
+                            <a href="account.html">Account</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a href = "cart.html"><img id="Cart" src="images/cart.png"></a>
+                <img id="Expand" src="images/menu.png" class="menu-icon" onclick="menuToggle()">
+            </div>
+        </div>
+    </div>
+
+    <div class="small-container cart-page">
+        <table id="checkout">
+            <tr id="checkoutTitle">
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+            </tr>
+        </table>
+
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="initialAmount">$0.00</td>
+                </tr>
+                <tr>
+                    <td>GST</td>
+                    <td id="tax">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="finalAmount">$0.00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="small-container checkout">
+        <a href="index.html" class="btn">Checkout</a>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3> Download Our App</h3>
+                    <p> Download App for Android </p>
+                    <div class="app-logo">
+                        <a href="index.html"><img src="images/play-store.png"></a>
+                        <a href="index.html"><img src="images/app-store.png"></a>
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <h3> Useful Links </h3>
+                    <ul>
+                        <li> <a href="index.html">Coupons</a> </li>
+                        <li> <a href="index.html">Blog Post</a> </li>
+                        <li> <a href="index.html">Return Policy</a> </li>
+                        <li> <a href="index.html">Join Affiliate</a> </li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3> Follow Me!!!! </h3>
+                    <ul>
+                        <li> <a href="https://www.linkedin.com/in/chen-jin-yang-37baa8202/">LinkedIn</a> </li>
+                        <li> <a href="https://github.com/jinyang628">GitHub</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright"> Copyright 2022 - HTML Practice </p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script type="text/javascript" src="cartActivation.js"></script>

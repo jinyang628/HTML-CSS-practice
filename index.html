@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>JYStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class = "header">
+        <div class = "container">
+            <div class = "navbar">
+                <div class="logo">
+                    <a href="index.html"><img src = "images/picwish.png"></a>
+                </div>
+
+                <nav>
+                    <ul id="MenuItems">
+                        <li>
+                            <a style="color:blue" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="products.html">Products</a>
+                        </li>
+                        <li>
+                            <a href="account.html">Account</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <a href = "cart.html"><img id="Cart" src="images/cart.png"></a>
+                <img id="Expand" src="images/menu.png" class="menu-icon" onclick ="menuToggle()">  
+                
+                  
+            </div>
+        </div>
+    
+
+        <div class = "row">
+            <div class = "col-2">
+                <h1>My stuff is quite cool ngl</h1>
+                <p>I swear none of my belongings smell. Trust pls<br>xd</p>
+                <a href="products.html" class="btn">Explore Now</a>
+            </div>
+
+            <div class = "col-2">
+                <img src = "images/Profile.png" height = 500px>
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "small-container">
+        <h2 class = "title">Categories</h2>  
+            <div class = "row">
+                <div class = "col-3">
+                    <a href = "products.html">
+                        <img src = "images/1.jpeg">   
+                        <h3> Electronics </h3>
+                    </a>
+                </div>
+                <div class = "col-3">
+                    <a href = "products.html">
+                        <img src = "images/2.jpeg">
+                        <h3> Necessities </h3>   
+                    </a>
+                </div>
+                <div class = "col-3">
+                    <a href = "products.html">
+                        <img src = "images/3.jpeg">   
+                        <h3> Weird Stuff </h3> 
+                    </a>
+                </div>
+            </div>
+    </div>
+    <br>
+
+
+    <div class = "small-container">
+        <h2 class = "title">Featured Products</h2>
+        <div class = "row">
+            <div class = "col-4">
+                <img src = "images/New Tissue Paper.jpeg">
+                <h4> New Tissue Paper </h4>
+                <div class = "rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$3.99</p>
+            </div>
+            <div class = "col-4">
+                <img src = "images/Some Rock.jpeg">
+                <h4> Some Rock </h4>
+                <div class = "rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>$18.70</p>
+            </div>
+            <div class = "col-4">
+                <img src = "images/Functional Pencil.jpeg">
+                <h4> Functional Pencil </h4>
+                <div class = "rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$0.50</p>
+            </div>
+            <div class = "col-4">
+                <img src = "images/Waxed Dental Floss.jpeg">
+                <h4> Waxed Dental Floss </h4>
+                <div class = "rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>$5.10</p>
+            </div>
+        </div>
+    </div>
+
+
+   <div class = "small-container">
+        <h2 class = "title">Latest Products</h2>
+        <div class = "row">
+            <div class = "col-4">
+                <img src = "images/Math Teacher in a Pocket.jpeg">
+                <h4> Math Teacher in a Pocket </h4>
+                <div class = "rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>$99.99</p>
+            </div>
+            <div class = "col-4">
+                <img src = "images/Money Container.jpeg">
+                <h4> Money Container </h4>
+                <div class = "rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$56.10</p>
+            </div>
+            <div class = "col-4">
+                <img src = "images/Vitamin C.jpeg">
+                <h4> Vitamin C </h4>
+                <div class = "rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$9.50</p>
+            </div>
+            <div class = "col-4">
+                <img src = "images/Old Tissue Paper.jpeg">
+                <h4> Old Tissue Paper </h4>
+                <div class = "rating">
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$0.20</p>
+            </div>
+        </div>
+   </div>
+
+
+   <div class = "offer">
+       <div class = "small-container">
+           <div class = "row">
+               <div class = "col-5">
+                   <img id="ruler" src="images/exclusive.jpeg" class = "offer-img">
+               </div>
+               <div class = "col-5">
+                   <p>Exclusively Available in JYStore</p>
+                   <h1> Old Ruler 1.7.3 </h1>
+                   <small> The ruler is like really really old. Kind of sticky too not sure why </small>
+                   <br>
+                   <a href="" class = "btn"> Buy Now </a>    
+               </div>
+           </div>
+       </div>
+    </div>
+    </div>
+
+    <div class = "testimonial">
+        <div class = "small-container">
+            <div class = "row">
+                <div class = "col-6">
+                    <i class = "fa fa-quote-left"></i>
+                    <p> Good stuff man...what a steal...u can get his old tissue paper for such a low price.</p>
+                    <div class = "rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src = "images/user-1.png">
+                    <h5>Hsiao Meng</h5>
+                </div>
+
+                <div class = "col-6">
+                    <i class = "fa fa-quote-left"></i>
+                    <p> Quality products. Always delivered on time. Rate this seller 4 bitter gourds out of 5.</p>
+                    <div class = "rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src = "images/user-2.png">
+                    <h5>xXDab_MasterXx</h5>
+                </div>
+                
+                <div class = "col-6">
+                    <i class = "fa fa-quote-left"></i>
+                    <p> Friendly seller. Gave me a fist bump after delivering it to my house uwu.</p>
+                    <div class = "rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src = "images/user-3.png">
+                    <h5>SMILEMOREFROWNLESS</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "footer">
+        <div class = "container">
+            <div class = "row">
+                <div class = "footer-col-1">
+                    <h3> Download Our App</h3>
+                    <p> Download App for Android </p>
+                    <div class="app-logo">
+                        <a href="index.html"><img src="images/play-store.png"></a>
+                        <a href="index.html"><img src="images/app-store.png"></a>
+                    </div>
+                </div>
+                <div class = "footer-col-2">
+                    <h3> Useful Links </h3>
+                    <ul>
+                        <li> <a href="index.html">Coupons</a> </li>
+                        <li> <a href="index.html">Blog Post</a> </li>
+                        <li> <a href="index.html">Return Policy</a> </li>
+                        <li> <a href="index.html">Join Affiliate</a> </li>
+                    </ul>        
+                </div>
+                <div class = "footer-col-3">
+                    <h3> Follow Me!!!! </h3>
+                    <ul> 
+                        <li> <a href="https://www.linkedin.com/in/chen-jin-yang-37baa8202/">LinkedIn</a> </li>
+                        <li> <a href="https://github.com/jinyang628">GitHub</a> </li>
+                    </ul>        
+                </div>
+            </div>
+            <hr>
+            <p class = "copyright"> Copyright 2022 - HTML Practice </p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script type = "text/javascript" src = "commonScripts.js"></script>
